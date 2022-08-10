@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300&family=Barlow:wght@300;500;700&family=Roboto+Slab:wght@300;500;700&display=swap');
+/*google fonts*/
+
+/*RAIZ*/
+:root{
+    /*paleta de colores/*/
+    --primario: #FC0176;
+    --secundario: #222222;
+    --terciario: #444444;
+    --button: :var(--primario);
+
+
+    /*espacios*/
+    --espacio-lg: 48px;
+    --espacio-md: 36px;
+    --espacio-sm: 24px;
+    --espacio-xs: 12px;
+
+    /*font-famili*/
+    --font1: 'Albert Sans', sans-serif;
+    --font2: 'Barlow', sans-serif;
+    --font3: 'Roboto Slab', serif;
+
+    /*font-sizes*/
+    --text-xxl:64px;
+    --text-xl: 48px;
+    --text-m: 32px;
+    --text-s: 20px;
+    --text-xs: 16px;
+    --text-xxs: 14px;
+
+    
+}
+
+/*rem= para espaciados, em=para texto*/
+
+/*NORMALIZAR ARCHIVO*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*para controlar los elementos*/
+}
+html{
+    font-size: 62.5%; /*propiedad que se hereda, font size 62.5% equivale a 10px, el tamaño base del sitio es 10px. sirve para las unidades de medida, EM Y REM 1 em y rem AHORA =10px*/
+}
+body{
+    font-family: var(--font3);
+    background-color: var(--terciario);
+}
+img{
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+    font-size: 2em;
+}
+a{
+    text-decoration: none;
+    font-size: 2em;
+}
+/*fin de normalizado*/
+
+
+/*HELPER*/
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+/*Fin HELPER*/
+
+
+
+/*HEADER*/
+.main-header{
+    padding: 2rem;
+    font-family: var(--font3);
+    background-color: var(--secundario);
+
+}
+
+.main-header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+.main-header-logo{
+    display: block;
+    max-width: 150px;
+    min-width: 120px;
+
+}
+.main-menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+.header-item{
+    color: var(--secundario);
+    padding: 10px;
+    font-size: var(--espacio-sm);
+    font-weight: bold;
+    transition: all .3s;
+    color:var(--primario);
+}
+.header-item-active{
+    border: 0px solid var(--terciario);
+    border-radius: 15%;
+}
+.header-item:hover{
+    background-color: var(--terciario);
+    color: antiquewhite;
+}
+/*FIN DEL HEADER*/
+
+
+
+/*productos*/
+
+
+h2{
+    color: var(--primario);
+    font-size: var(--text-xxl);
+    padding-top: 10rem;
+    text-align: center;    
+}
+/*CARD*/
+#cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--espacio-sm);
+}
+.card{
+   flex: 1 1 250px;
+   margin-top: 5rem;
+   border: solid var(--primario);
+}
+.card div{
+    padding: var(--espacio-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+    padding: 1rem;
+}
+.card-title{
+    font-size: var(--text-m);
+    font-family: var(--font3);
+    color: var(--primario);
+}
+.card-description{
+    font-family: var(--font2);
+    font-size: var(--text-xs);
+    color: var(--secundario);
+    margin-bottom: 1.5rem;
+
+}
+.card-info{
+    font-family: var(--font1);
+    font-size: var(--text-xxs);
+    color: var(--terciario);
+}
+.card:hover{
+      border: solid var(--secundario) 0.5rem;
+      opacity: 90%;
+ 
+}
+
+/*footer*/
+.footer{
+    background-color: var(--secundario);
+    font-size: 1em;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+.footer-li{
+    text-align: center;
+}
+.footer-logo{
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    display: block;
+}
+
+
+
+/*media qurry RESPONSIVE*/
+@media (max-width: 540px) {
+   .main-header-nav{
+    flex-direction: column;
+    gap: var(--espacio-lg);
+   }
+}
+
